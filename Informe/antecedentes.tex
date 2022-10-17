@@ -1,0 +1,47 @@
+\section{El Atlas Solar Colombiano}
+Colombia recibe abundante irradiación solar con una media de 4.5 kWh/m$^2$, por encima de la media mundial de 3.9 kWh/m$2$. Esta radiación solar media se 
+mantiene casi constante durante todo el año, lo que convierte a Colombia en un lugar ideal para implementar proyectos solares fotovoltaicos (Sofia Orjuela, 
+Leon; Mendoza, 2021 \textbf{[Pendiente]}) . El gobierno colombiano ha puesto en marcha una ley para estimular la implantación de sistemas fotovoltaicos a 
+pequeña y gran escala mediante la concesión de incentivos fiscales (Ministerio de Minas y Energía, y Unidad de Planeación Minero Energética (UPME, 2014 
+\textbf{[Pendiente]}) . Sin embargo, a pesar de los esfuerzos del gobierno por promover las instalaciones fotovoltaicas, la falta de una base de datos de 
+información meteorológica sólida y de fácil acceso dificulta la realización de análisis de viabilidad de las instalaciones fotovoltaicas y la evaluación de su 
+capacidad energética. 
+
+En Colombia, el Instituto de Hidrología, Meteorología y Estudios Ambientales (IDEAM) proporciona mediciones in situ de datos meteorológicos. Sin embargo, hay 
+pocas estaciones meteorológicas en el territorio colombiano y la calidad de los datos se ve afectada por la falta de mantenimiento y calibración de los 
+sensores. Aunque algunos sitios web intentan proporcionar estimaciones de la producción fotovoltaica, no existe una herramienta especializada que tenga en 
+cuenta las necesidades del país, los requisitos del usuario y el idioma nativo de éste. Por lo tanto, una herramienta que tenga en cuenta estos requisitos 
+podría impulsar los proyectos de energía solar fotovoltaica en el país.
+
+Para resolver este problema, se creó una herramienta web interactiva que permite visualizar datos meteorológicos y evaluar el potencial actual y futuro de 
+generación fotovoltaica en todo el territorio colombiano. Esta herramienta, llamada Atlas Solar Colombiano (\url{http://162.240.212.193:3000}), se basa en dos 
+bases de datos meteorológicos: una con datos históricos extraídos de la información de imágenes satelitales y otra con datos de modelos de proyección del 
+cambio climático. Además, el Atlas cuenta con dos modelos de generación fotovoltaica, uno básico y uno avanzado, que permite estimar la generación de una 
+instalación solar fotovoltaica, de acuerdo con las necesidades del usuario. El Atlas proporciona un mapa interactivo que muestra:
+
+\begin{itemize}
+    \item Datos históricos para el periodo comprendido entre 1998 y 2019 obtenidos del National Renewable Energy Laboratory: irradiación global horizontal, 
+irradiación normal directa, irradiación difusa horizontal, ángulo cenital solar, velocidad del viento y temperatura ambiente. Esta base de datos fue validada 
+con mediciones in situ proporcionadas por el IDEAM.
+    \item Datos de escenarios de cambio climático a escala regional para el periodo 2070-2099 obtenidos del Coordinated Regional Downscaling Experiment: 
+irradiación global horizontal, velocidad del viento y temperatura ambiente bajo dos escenarios de cambio climático.
+    \item Una calculadora de generación fotovoltaica que permite a los usuarios estimar la posible potencia fotovoltaica generada por un sistema fotovoltaico 
+personalizado en una ubicación específica. Un modelo básico proporciona parámetros por defecto para el sistema fotovoltaico, y todos los parámetros 
+fotovoltaicos pueden personalizarse a través del modelo avanzado.
+\end{itemize}
+
+Esta herramienta interactiva permitirá a los inversores evaluar el potencial actual y futuro de generación fotovoltaica en cualquier lugar de Colombia. Se trata 
+de la primera herramienta interactiva en línea que permite a los usuarios estudiar el potencial de energía fotovoltaica en Colombia a partir de una sólida base 
+de datos y teniendo en cuenta las proyecciones del cambio climático.
+
+\section{Proyecto de Desarrollo con Enfoque Territorial - PDET}
+Como apoyo al fortalecimiento del Programa Colombia Sostenible con los Proyectos de Desarrollo con Enfoque Territorial -PDET el investigador Iván Carrol, de la 
+Facultad de Ingeniería de la Universidad de los Andes, realizó 1260 mapas utilizando imágenes Sentinel 2 del Programa Copernicus de la Agencia Espacial Europea 
+por medio de la aplicación de índices de cobertura con los cuales se creó una línea base del año 2020 que posteriormente en el año 2025 se comparará para 
+determinar los efectos de la implementación de los proyectos de desarrollo en subregiones del país donde se ubican los PDET. Este proyecto fue realizado en 
+conjunto con la Facultad de Economía de la Universidad de los Andes y la Universidad de Antioquia.
+
+Adicionalmente, atendiendo el Objetivo de Desarrollo Sostenible – ODS 11 sobre ciudades y comunidades sostenibles, Carroll aplicó un índice de funcionalidad
+ecológica del suelo mediante inteligencia artificial en imágenes Sentinel 2 para alertar a tomadores de decisiones, principalmente alcaldes, de 50 ciudades de 
+América Latina y el Caribe sobre la baja calidad de vida, el crecimiento acelerado y la reducción en el acceso a zonas verdes de algunas urbes. Esta 
+investigación está en curso de ser publicada y presentada.

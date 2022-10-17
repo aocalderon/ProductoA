@@ -1,0 +1,33 @@
+\documentclass[]{report}
+\usepackage[letterpaper, right=2cm, top=2cm, left=2cm]{geometry}
+\usepackage[spanish]{babel}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{graphicx}
+
+\input{configuracion}
+
+\begin{document}
+
+\input{portada}
+
+\xchapter{0}{Introducción}
+Una breve Introducción.
+
+\xchapter{1}{Antecedentes}
+\input{antecedentes}
+
+\xchapter{2}{Fuentes de datos}
+\input{fuentes}
+
+\xchapter{3}{Metodología}
+\input{metodologia}
+
+\xchapter{4}{Resultados y conclusiones}
+Presentacion de resultados y conclusiones.
+
+\bibliographystyle{plain}
+\bibliography{informe.bib}
+
+\end{document}

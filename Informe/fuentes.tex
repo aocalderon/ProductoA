@@ -1,0 +1,85 @@
+\section{Cobertura de acueducto}
+La cobertura del servicio de acueducto corresponde al porcentaje de predios residenciales con acceso al servicio de acueducto; entendiéndose como predios 
+residenciales aquellos con estratos 1, 2, 3, 4, 5, 6 y los predios aún no estratificados pero reconocidos por la alcaldía como residenciales. Esta cobertura se 
+obtiene a través de la información consignada por los alcaldes en el ``Reporte de Estratificación y Coberturas'', dispuesto en el Sistema Único de Información 
+del módulo alcaldes.  La información fue recopilada desde el portal de Terridata\footnote{\url{https://terridata.dnp.gov.co/}}, una 
+aplicación proveida por el Departamento Nacional de Planeación de Colombia para la consulta estadística por parte de entes territoriales de de indicadores sobre 
+diversos sectores y temáticas.
+
+\section{Índice de Cobertura de Energía Eléctrica - ICEE}
+
+Este índice es calculado por la Unidad de Planeación Minero Energética (UPME) que mide la tasa de viviendas en sector residencial que tienen infraestructura 
+eléctrica disponible y es proveido por el Sistema Interconectado Nacional o mediante soluciones aisladas dentro de las zonas nacionales de interconexión (ZNI). 
+ El índice fue calculado con vigencia al 2018.  El conjunto de datos fue recopilado desde la página web de la 
+entidad\footnote{\url{https://tinyurl.com/5hduxcnw}}.
+
+\section{Rendimiento promedio de cultivos}
+
+El rendimiento de cultivos es un indicador de la cantidad de toneladas producidas por hectárea para un cultivo particular. Esta información se obtiene a partir 
+de las Evaluaciones agropecuarias municipales\footnote{\url{https://www.upra.gov.co/web/guest/eva-2020}}, que consisten en la recolección de información a 
+través de formularios diseñados e implementados con un aplicativo web, con módulos para los cultivos transitorios, anuales o permanentes. 
+
+Esta operación fue desarrollada durante los meses de octubre a diciembre de 2020, recolectando información de 1099 municipios y 197 cultivos. En cuanto al 
+procesamiento de datos, se obtuvo el rendimiento promedio para todos los tipos de cultivos presentes en cada municipio, priorizando el valor más reciente para 
+cultivos transitorios y utilizando el valor anual para cultivos permanentes. Con respecto a los valores nulos, se utilizó el valor de -1 para aquellos 
+municipios en los que no se tuviera información disponible.  Los datos puedes ser descargados desde la aplicación 
+web\footnote{\url{https://tinyurl.com/yp4jmv9n}} proveida por la entidad.
+ 
+\section{Tasa de deserción intra-anual del sector oficial}
+
+La tasa de deserción intra-anual del sector oficial corresponde al porcentaje de estudiantes de educación básica y media (transición a once) que abandonan el 
+sistema educativo antes de finalizar el año lectivo con respecto a la cantidad total de estudiantes matriculados a inicio del año. Esta información es 
+recopilada por el Ministerio de Educación y disponible en Terridata, una herramienta para fortalecer la gestión pública a partir de datos a nivel municipal, 
+presentando indicadores estandarizados. Con respecto a los valores nulos, se utilizó el valor de -1 para aquellos municipios en los que no se tuviera 
+información disponible.
+
+\section{Índice de Informalidad}
+
+El índice se calcula como el porcentaje de personas desocupadas informalmente con respecto a la población total.  Este indicador también se encuentra 
+disponible en Terridata y representa el porcentaje de personas que no cuentan con un trabajo formal en cada una de las entidades territoriales con respecto a 
+la población total de cada municipio mismo. Esta tasa calculada con información de la FILCO (Ministerio del Trabajo) y resulta como el complemento del 
+indicador ``Porcentaje de personas ocupadas formalmente con respecto a la población total'' (P. Formal) y se define de tal manera según la entidad citada: 
+
+$$P. Informal = 1 - P. Formal$$
+
+\section{Biomasa sobre el suelo}
+
+El proyecto GlobBiomass \cite{santoro_globbiomass_2018, santoro_detailed_2018} de la Agencia Espacial Europea ha recopilado datos y provee conjuntos de libre 
+descarga con información referente al volumen de biomasa en bosques y la métrica de biomasa por encima del suelo, conocida como AGB, para el año 2018.  El AGB 
+se refiere a la masa expresada como peso seco de las partes arbóreas de toda especie vegetal viva a excepción de sus raíces.  Sus unidades se miden en toneladas 
+por hectárea (Mg/ha) y la resolución espacial de este conjunto es de 1 Km$^2$.
+
+Se descargaron dos conjuntos de datos que cubrían el área de Colombia.  Usando los polígonos correspondientes para el país se recortaron las áreas necesarias de 
+cada conjunto y se unieron posteriormente para conformar un referente de AGB para todo el territorio nacional.
+
+\section{Índice de vegetación NDVI}
+
+El índice de diferencia normalizada de la vegetación (NDVI) es un indicador de la vitalidad de la flora presente en un área determinada.  Este se calcula a 
+partir de las bandas infrarrojas y el espectro correspondiente al rojo que suministran diversos sensores de satélite.  El rango de valores oscila entre 0 y 1 
+donde los valores más altos indican vegetación más saludable.  El programa Copérnico de la Unión Europea, a través del portal Copernicus Global Land 
+Service\footnote{\url{https://land.copernicus.eu/global/products/ndvi}}, provee imágenes globales de NDVI para todos los meses del año después de promediar 
+diferentes muestras tomadas por el satélite PROBA-V durante el periodo de 2015 al 2019.  La resolución espacial de los conjuntos de datos es de 1 Km$^2$. 
+
+Para este estudio se tomaron una imagen para cada mes del producto Short Term Statistics Versión 3.  Las imágenes se recortaron de acuerdo a la zona de estudio 
+ y se promediaron las 12 imágenes resultantes para obtener un promedio anual representativo del índice NDVI para el territorio Colombiano.  El portal para la 
+descarga de imágenes y conjuntos de datos se puede acceder a través de su sitio web\footnote{\url{ https://tinyurl.com/ekzekr4d}}.
+
+\section{Porcentaje de nubosidad}
+
+El proyecto EarthEnv \cite{wilson_remotely_2016}  es un esfuerzo colaborativo entre diversos expertos para desarrollar un conjunto de datos de escala global con 
+capas de resolución de 1 Km$^2$ para monitorear y modelar los ecosistemas, biodiversidad y clima.  El trabajo fue soportado por NCEAS, NASA, NSF y la 
+Universidad de Yale.  
+
+Para el caso del porcentaje de nubosidad se promediaron las frecuencias mensuales dentro de un periodo de 15 años (2001-16) de dos muestras diarias de los 
+satélites MODIS.  Del conjunto global se extrajo el área correspondiente a Colombia con valores entre 4000 y 10000 unidades.  Estos valores deben ser divididos 
+por 100 para indicar el valor porcentual del número de días con nubosidad al año.  El conjunto de datos global puede ser descargado desde la página web del 
+proyecto\footnote{\url{http://www.earthenv.org/cloud.html}}.
+
+\section{Irradiación solar}
+
+El Banco Mundial a través de su catálogo de datos\footnote{\url{https://datacatalog.worldbank.org/search/dataset/0038645}} distribuye diferentes capas alusivas 
+a variables de energía solar, entre ellas el índice de irradiación global horizontal (GHI).  Este recurso fue desarrollado por SolarGIS 
+(\href{https://solargis.com}{solargis.com}) y se provee por medio del Atlas Solar Global\footnote{\url{https://globalsolaratlas.info/download/colombia}}.  Los 
+valores de GHI se miden en kWh/m$^2$ con una resolución espacial nominal de 250m.  A través del portal web del atlas global se permite descargar conjuntos 
+específicos para cada país por lo que solo fue necesario ajustar los límites y tamaño de píxel de este conjunto para coincidir con aquellos de los demás 
+indicadores.
