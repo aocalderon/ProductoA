@@ -1,7 +1,52 @@
+Para la selección de un conjunto de ubicaciones idóneas para la implementacion de las soluciones propuestas se decidió seguir un enfoque de selección 
+multicriterio soportado en operaciones de lógica difusa.  El diagrama \ref{fig:plan} ilustra esquemáticamente los pasos de la metodología propuesta.  Esta 
+metodología puede dividirse en tres partes para su explicación.  Primero, un conjunto de capas son preparadas a partir de una serie de indicadores 
+socio-económicos y físicos. Luego, dichas capas son transformadas para estandarizar su magnitud y dimensiones.  Finalmente, se asigna un peso a cada capa de 
+acuerdo a su importancia y  se aplica una operación de agregación sobre todas las capas para consolidar un único resultado.  A continuación se explica en más 
+detalle los pasos seguidos en cada parte de la metodología.
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \includegraphics[width=1\textwidth]{figures/plan}
     \caption{Diagrama esquemático de la metodología propuesta.}
     \label{fig:plan}
 \end{figure}
+
+En la selección \ref{sec:fuentes} se establecieron las fuentes de datos de los indicadores tenidos en cuenta dentro de la metodología.  En la primera parte 
+de la metodología se hizo necesario hacer cierto tratamiento en cada una de ellas.  En particular, todas las capas referentes a indicadores socio-económicos 
+se obtuvieron en un esquema tabular, esto es una tabla donde aparecia el valor de cada indicador junto con otras variables relacionadas al fenómeno a nivel de 
+los municipios de Colombia.  Se tuvó en cuenta el código DANE de cada municipio junto con el valor relacionado a la variable en cuestión.  
+Posteriormente, se ejecutó un cruce de datos entre la información extraida y el mapa oficial DANE para georreferenciar los datos y generar una vista de la 
+distribución geográfica del indicador.  De esta manera se obtienen una serie de mapas que ilustran la composición del indicador para cada municipio.
+
+Para las variables física también se hizó necesario aplicar ciertas operaciones espaciales para ajustar los conjuntos de datos iniciales a las condiciones del 
+área de estudio.  Por lo general, para estos casos, los estudios son de caracter global, por lo que se requeria extraer los datos solo para el territorio 
+Colombiano.  Según el caso fue necesario aplicar operaciones de agregación espacial, si los datos para Colombia se presentaban en más de una fuente, o 
+temporales, si se proveian datos a nivel mensual y lo requerido eran promedios anuales.  
+
+Para la segunda parte de la metodología, se requiere que todas las capas se encuentren en una version raster de idénticas dimensiones (esto es 
+una imagen con igual número filas y columnas donde el valor de cada pixel sea el valor del indicador que representa).  En esta etapa, se aplicaron operaciones 
+espaciales a las capas de indicadores socio-económicos para convertir su version vectorial (polígonos representando cada municipio) a capas raster.  Como 
+dimensiones específicas se seleccionó un área de 1666 columnas por 1972 filas que cubre la extensión del mapa oficial DANE usando un sistemas de coordenadas 
+EPSG:3857 (Pseudo-Mercator).  La resolución espacial obtenida fue de aproximadamente 1 Km$^2$.  Se reprojectaron y se ajustaron todas las capas (incluyendo las 
+variables físicas) a dichas dimensiones y al sistema de coordenadas mencionado para permitir su análisis en unidades de metros.
+
+Para permitir la aplicación de una función de agregación todas las capas deben ser tratadas para transformar sus valores y rango de datos a un estandar común.  
+La lógica difusa provee una serie de funciones de membresía que permiten escalar los datos de 0 a 1 donde el usuario puede especificar valores a priorizar y 
+diversas clases de curvas para transformar los datos.  La membresía lineal es la más sencilla de las funciones y se corresponde a una normalización típica.  
+Los valores para cada variable se escalan, de acuerdo a las caracteristicas de la variable, dandole un valor de 0 al valor con menor prioridad y un valor de 
+1 al más alto, los valores intermedios se obtienen a travéz de una interpolación directa.  
+
+En la última parte de la metodología, contamos con una serie de capas raster ponderadas y unificadas.  Cada píxel en las imágenes se corresponde uno a uno por 
+lo que cualquier operación de agregación es valida.  La operación de agregación tomará cada píxel de las capas en la misma ubicación y los agregará de acuerdo 
+a su función, el resultado sera el valor del píxel en dicha ubicación para el mapa final.  De nuevo, la lógica difusa provee diferentes funciones de agregación 
+pero dadas las caracteristicas del estudio se decidió utilizar una sumatoria simple.  Cabe aclarar que previo a la operación de agregación se asignaron pesos 
+distintivos a cada capa.  Esto es, un valor por el cual se multiplica el valor de cada píxel antes de operarlo con los demas.  La asignación de pesos a cada 
+capa se hace de manera coordinada entre los interesados y expertos y puede ser facilmente editada en el modelo final para su posterior ejecución.  
+
+El mapa obtenido en esta estapa es finalmente escalado, entre 0 y el máximo valor posible de acuerdo a los pesos asignados, obteniendo una capa raster con 
+valores entre 0 y 1 para cada ubicación en el mapa a manera de un índice.  Para obtener un indicador a nivel de municipio, se utiliza una capa adicional para 
+agregar por zonas y calcular el promedio de todos los píxeles contenidos en un respectivo municipio.  Esto entrega una capa vectorial, con cada municipio 
+relacionado con su valor promedio de acuerdo al puntaje obtendio en el índice anterior.  Esta lista de municipios y su valor promedio se utiliza como un 
+ranking para la selección de los municipios con mayor potencial para la implementación de las soluciones propuestas en las posteriores etapas de la 
+investigación.

@@ -2,7 +2,7 @@
 kile_livePreviewEnabled=true
 kile_livePreviewStatusUserSpecified=false
 kile_livePreviewTool=LivePreview-PDFLaTeX
-lastDocument=metodologia.tex
+lastDocument=informe.tex
 
 [document-settings,item:antecedentes.tex]
 Bookmarks=
@@ -76,7 +76,7 @@ open=false
 order=-1
 
 [item:fuentes.tex]
-open=true
+open=false
 order=1
 
 [item:informe.bib]
@@ -92,7 +92,7 @@ open=true
 order=0
 
 [item:metodologia.tex]
-open=true
+open=false
 order=2
 
 [item:portada.tex]
@@ -116,8 +116,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:fuentes.tex]
-CursorColumn=46
-CursorLine=25
+CursorColumn=11
+CursorLine=0
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
@@ -132,16 +132,16 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:informe.tex]
-CursorColumn=18
-CursorLine=24
+CursorColumn=30
+CursorLine=20
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:metodologia.tex]
-CursorColumn=27
-CursorLine=3
+CursorColumn=14
+CursorLine=51
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
