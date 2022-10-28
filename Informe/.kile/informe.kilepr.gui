@@ -98,8 +98,8 @@ open=false
 order=-1
 
 [item:fuentes.tex]
-open=false
-order=3
+open=true
+order=1
 
 [item:informe.bib]
 open=false
@@ -115,27 +115,27 @@ order=0
 
 [item:metodologia.tex]
 open=true
-order=1
+order=4
 
 [item:portada.tex]
-open=false
-order=-1
+open=true
+order=3
 
 [item:resultados.tex]
-open=false
-order=1
+open=true
+order=2
 
 [view-settings,view=0,item:anexos.tex]
-CursorColumn=31
-CursorLine=16
+CursorColumn=19
+CursorLine=3
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:antecedentes.tex]
-CursorColumn=92
-CursorLine=71
+CursorColumn=83
+CursorLine=70
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
@@ -150,8 +150,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:fuentes.tex]
-CursorColumn=62
-CursorLine=59
+CursorColumn=0
+CursorLine=45
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
@@ -174,8 +174,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:metodologia.tex]
-CursorColumn=13
-CursorLine=62
+CursorColumn=97
+CursorLine=55
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
@@ -191,7 +191,7 @@ ViMarks=
 
 [view-settings,view=0,item:resultados.tex]
 CursorColumn=0
-CursorLine=28
+CursorLine=42
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]

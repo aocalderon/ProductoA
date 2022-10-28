@@ -1,17 +1,17 @@
 
 Como primer resultado de esta investigación se ha consolidado una base de datos georreferenciada de indicadores socio-económicos y variables físicas relacionadas a la identificación
 de zonas de interés para la implementación de soluciones de energía alternativa usando recursos de biomasa y solar.  Las capas procesadas se recogieron en un
-único archivo con formato geopackage, formato soportado por el Open Geospatial Consortium (OGC\footnote{\url{https://www.ogc.org/}}) como estandar 
+único archivo con formato geopackage, formato soportado por el Open Geospatial Consortium (OGC\footnote{\url{https://www.ogc.org/}}) como estándar
 interoperable, que contiene el total de los indicadores mencionados en la sección \ref{sec:fuentes}.  El archivo se distribuye con este informe como un 
 anexo digital dentro de la carpeta \textit{indicadores}.
 
-Con las capas de entrada disponibles se trabajó la metodología propuesta a travéz de la implementación de un modelo que permite automitizar los pasos 
+Con las capas de entrada disponibles se trabajó la metodología propuesta a través de la implementación de un modelo que permite automatizar los pasos
 generales descritos en la sección \ref{sec:metodologia}.  El modelo toma como entrada las capas de indicadores mencionadas anteriormente y permite la 
 generación de los índices necesarios para la selección de las zonas de implementación.  Este modelo se construyó usando la herramienta Graphical Modeler de la 
 aplicación de software libre QGIS 3.22.  Dicho software es de libre descarga y de acceso público desde su sitio web\footnote{\url{https://www.qgis.org/}}.  El 
 modelo también se distribuye como anexo digital a este informe en formato model3, que puede ser abierto y ejecutado usando QGIS 3.22, y como código Python, que 
 igualmente puede ser ejecutado desde la consola de dicha herramienta.  Los archivos mencionados se encuentran dentro de la carpeta \textit{modelo}.  La figura 
-\ref{fig:modelo} muestra una captura del modelo construido y los pasos ejecutados para la generación de los indices de potencialidad.
+\ref{fig:modelo} muestra una captura del modelo construido y los pasos ejecutados para la generación de los índices de potencialidad.
 
 Por último, se presentan los índices creados por la metodología propuesta y que soportaran la selección de zonas de trabajo para la puesta en marcha de las 
 siguientes fases de la investigación.  El primer índice se denomina índice de potencialidad y es una capa raster que agrega las capas transformadas y 
@@ -24,18 +24,20 @@ A partir del índice de potencialidad se realizó una agregación a nivel de mun
 dentro de cada uno de los municipios y se le asignó dicho promedio a cada uno de ellos.  Esto permite generar un orden de los municipios de mayor a menor de 
 acuerdo al valor promedio del índice obtenido.  Posteriormente, se filtraron los municipios PDET del resultado anterior con el objetivo de seleccionar los 
 puntajes más altos dentro de esta categoría.  Las figuras \ref{fig:pormunicipios} y \ref{fig:porpdet} ilustran la agregación por municipios y el filtrado por 
-municipios PDET respectivamente.  Igualmente, los índices de potencialidad se adjuntan a este informe como anexos digitales bajo la carpeta \textit{indices}.
+municipios PDET respectivamente.  Igualmente, los índices de potencialidad se adjuntan a este informe como anexos digitales bajo la carpeta \textit{índices}.
 
+Esta primera fase del proyecto tuvo como objetivo priorizar y ubicar geográficamente a las comunidades que serán áreas de estudio, en ellas se generarán los
+desarrollos tecnológicos y pruebas de concepto que se detallan en la segunda línea de acción del plan de trabajo. La selección será realizada a partir de la
+tabla que muestra los municipios con mejor índice global, con base en los indicadores socio-económicos y físicos definidos. En las siguientes fases del
+proyecto,
+se identificarán las oportunidades de generación de energía renovable a partir de la cuantificación de los recursos disponibles, tanto solar como de biomasa.
 
+Es importante resaltar que la metodología propuesta para la generación de los índices de potencialidad es parametrizable, en el sentido de que pueden ajustarse
+los pesos asociados a cada una de las capas de los indicadores. Esto se traduce en una herramienta flexible que puede ser adaptada a los cambios que se
+consideren pertinentes. Además, otros parámetros, más relacionados con el modelo en sí, también son susceptibles de ajustes. Igualmente, es posible incluir
+otros indicadores, tanto socio-económicos como físicos, en estudios posteriores.
 
-% Conclusión: listado de municipios con alto potencial.
-% 
-% Resultados.
-% Mostrar mapa final. Y una tabla con los primeros 10 municipios. Justificación de los pesos seleccionados con base en los objetivos del proyecto.
-% 
-% Conclusiones.
-% Indicar cuál es la zona seleccionada que será utilizada para las siguientes fases del proyecto. Sobre está zona se hará el estudio de concepto. Describir
-% brevemente lo que se hará.
-% Metodología parametrizable para la priorización/selección de la zona bajo estudio.
-% Posibilidad de incluir otros indicadores, tanto socio económicos como físicos, en estudios posteriores con base en los objetivos del proyecto.
-% Importante la disponibilidad de datos abiertos de fuentes oficiales.
+Por último, hay que destacar que la iniciativa de las instituciones gubernamentales de mantener bases de datos abiertas sobre diferentes aspectos del acontecer
+ciudadano, demografía, salud, educación y producción agrícola, entre otros, permitió ubicar rápidamente y de manera confiable la información requerida para la
+caracterización socio-económica de los territorios.
+
