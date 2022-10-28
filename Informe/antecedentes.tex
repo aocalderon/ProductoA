@@ -1,9 +1,11 @@
 \section{El Atlas Solar Colombiano}
 Colombia recibe abundante irradiación solar con una media de 4.5 kWh/m$^2$, por encima de la media mundial de 3.9 kWh/m$2$. Esta radiación solar media se 
-mantiene casi constante durante todo el año, lo que convierte a Colombia en un lugar ideal para implementar proyectos solares fotovoltaicos (Sofia Orjuela, 
-Leon; Mendoza, 2021 \textbf{[Pendiente]}) . El gobierno colombiano ha puesto en marcha una ley para estimular la implantación de sistemas fotovoltaicos a 
-pequeña y gran escala mediante la concesión de incentivos fiscales (Ministerio de Minas y Energía, y Unidad de Planeación Minero Energética (UPME, 2014 
-\textbf{[Pendiente]}) . Sin embargo, a pesar de los esfuerzos del gobierno por promover las instalaciones fotovoltaicas, la falta de una base de datos de 
+mantiene casi constante durante todo el año, lo que convierte a Colombia en un lugar ideal para implementar proyectos solares fotovoltáicos 
+\cite{abril_study_2021}. Desde el año 2014, el gobierno colombiano ha puesto en marcha una ley\footnote{Ley 1715. Por medio de la cual se regula la 
+integración de las energías renovables no convencionales al sistema energético nacional. Bogotá, Colombia: Congreso de la República de Colombia. Disponible en 
+\url{http://www.upme.gov.co/}} para estimular la implantación de sistemas fotovoltaicos a pequeña y gran escala mediante la concesión de incentivos fiscales por 
+intermedio del Ministerio de Minas y Energía y la Unidad de Planeación Minero Energética (UPME) . Sin embargo, a pesar de los esfuerzos del gobierno por 
+promover las instalaciones fotovoltaicas, la falta de una base de datos de 
 información meteorológica sólida y de fácil acceso dificulta la realización de análisis de viabilidad de las instalaciones fotovoltaicas y la evaluación de su 
 capacidad energética. 
 
@@ -14,7 +16,8 @@ cuenta las necesidades del país, los requisitos del usuario y el idioma nativo 
 podría impulsar los proyectos de energía solar fotovoltaica en el país.
 
 Para resolver este problema, se creó una herramienta web interactiva que permite visualizar datos meteorológicos y evaluar el potencial actual y futuro de 
-generación fotovoltaica en todo el territorio colombiano. Esta herramienta, llamada Atlas Solar Colombiano (\url{http://162.240.212.193:3000}), se basa en dos 
+generación fotovoltaica en todo el territorio colombiano. Esta herramienta, llamada Atlas Solar 
+Colombiano\footnote{Disponible en \url{http://162.240.212.193:3000}}, se basa en dos 
 bases de datos meteorológicos: una con datos históricos extraídos de la información de imágenes satelitales y otra con datos de modelos de proyección del 
 cambio climático. Además, el Atlas cuenta con dos modelos de generación fotovoltaica, uno básico y uno avanzado, que permite estimar la generación de una 
 instalación solar fotovoltaica, de acuerdo con las necesidades del usuario. El Atlas proporciona un mapa interactivo que muestra:
@@ -45,3 +48,28 @@ Adicionalmente, atendiendo el Objetivo de Desarrollo Sostenible – ODS 11 sobre
 ecológica del suelo mediante inteligencia artificial en imágenes Sentinel 2 para alertar a tomadores de decisiones, principalmente alcaldes, de 50 ciudades de 
 América Latina y el Caribe sobre la baja calidad de vida, el crecimiento acelerado y la reducción en el acceso a zonas verdes de algunas urbes. Esta 
 investigación está en curso de ser publicada y presentada.
+
+\section{Análisis multi-criterio y lógica difusa}
+El uso de información georreferenciada y técnicas de análisis espacial se ha convertido en una opción viable, rápida y económica para la evaluación del 
+potencial de diversos recursos que demandan una visión holística y, en muchas ocasiones, interdisciplinaria.  Por ejemplo, numerosos estudios han demostrado la 
+utilidad de información georreferenciada a la hora de determinar potenciales ubicaciones para la implementación y despliegue de proyectos de energías renovables 
+como granjas solares y eólicas y plantas procesadoras de biomasa \cite{cabrera_landsat_2016, aydin_gis-based_2010, lourenco_biomass_2021}.  Igualmente, estas 
+técnicas se han utilizado para estudiar fenómenos tan diversos como las variaciones espaciales en la economía ambiental y de recursos y la identificación de 
+hábitats naturales y conservación ecológica \cite{bateman_applying_2002, gough_application_2000}.
+
+Una de las grandes contribuciones del análisis basado en geodatos es la oportunidad de procesar información proveniente de múltiples 
+fuentes como soporte a la toma de decisiones \cite{rikalovic_gis_2014, hansen_gis-based_2005}.  Por lo general, la evaluación de las ubicaciones más idóneas 
+para la puesta en marcha de una solución en particular demanda la combinación de múltiples factores y la participación interdisciplinaria de todos los 
+involucrados. Es ahí donde las técnicas espaciales como el  solapamiento ponderado de capas y la lógica difusa juegan un papel determinante.  Estas técnicas 
+permiten la asignación de pesos a cada aspecto del análisis, representado en la forma de mapas, y la combinación de dichos pesos para la generación de un mapa 
+que resume el potencial de fenómeno estudiado.  Este tipo de análisis multi-criterio permite a los participantes asignar la importancia que consideren 
+pertinente a cada aspecto del estudio y ponderar las alternativas disponibles para la identificación de aquellas regiones con mayor potencial de éxito 
+\cite{malczewski_gisbased_2006}.
+
+Dichas técnicas han demostrado muy buenos resultados en diferentes ámbitos.  Por ejemplo, \cite{feizizadeh_gis-based_2014} muestra la puesta en práctica de 
+técnicas de lógica difusa para la identificación y mitigación de áreas con alto riesgo de deslizamiento de tierras.  Un estudio similar provee una evaluación 
+del potencial de contaminación por arsénico usando una aproximación espacial anisotrópica y solapamiento ponderado en las regiones circundantes a minas de 
+hierro \cite{weerasiri_assessment_2014}.  Igualmente, \cite{bojorquez-tapia_integrating_2002} integra la aplicación de lógica difusa, métodos de optimización y 
+el uso de sistemas de información geográfica en la evaluación del impacto ecológico durante la construcción de autopistas en comunidades rurales y ecosistemas 
+naturales.  Dicha implementación permitió la interacción permanente entre expertos e interesados y una fluida alternativa de resolución de conflictos.
+
