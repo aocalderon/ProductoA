@@ -2,7 +2,7 @@
 kile_livePreviewEnabled=false
 kile_livePreviewStatusUserSpecified=true
 kile_livePreviewTool=LivePreview-PDFLaTeX
-lastDocument=metodologia.tex
+lastDocument=resultados.tex
 
 [document-settings,item:anexos.tex]
 Bookmarks=
@@ -190,8 +190,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:resultados.tex]
-CursorColumn=0
-CursorLine=42
+CursorColumn=20
+CursorLine=31
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
